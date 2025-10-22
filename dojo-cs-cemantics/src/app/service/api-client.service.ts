@@ -11,6 +11,7 @@ export class ApiClientService {
   private httpClient = inject(HttpClient);
 
   public getPokemonValue(guess: GuessWord): Observable<ResponseWord>{
-    return this.httpClient.get<ResponseWord>(`https://deno-hello-world-ze5xm8bbkzbx.pyropyramid.deno.net/${guess}`)
+    const result = this.httpClient.get<ResponseWord>(`https://deno-hello-world-sejy663a8381.pyropyramid.deno.net/${guess.value}`);
+    return result;
   }
 }

@@ -23,7 +23,7 @@ export class AppComponent {
   hasError = false;
   myResultDistance = 0
 
-  sendMyGuess() {
+  sendMyGuess() { 
     this.apiClient.getPokemonValue({
       value: this.myGuess
     }).pipe(
@@ -34,7 +34,8 @@ export class AppComponent {
       })
     ).subscribe(result=> {
       this.hasError = false;
-      this.myResultDistance = result.value
+      this.myResultDistance = result.result*100;
+      console.log(this.myResultDistance);
     });
   }
 }
