@@ -24,7 +24,6 @@ export class AppComponent {
   myResultDistance = 0
 
   sendMyGuess() {
-    this.myResultDistance = 45
     this.apiClient.getPokemonValue({
       value: this.myGuess
     }).pipe(
